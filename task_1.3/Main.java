@@ -7,6 +7,5 @@ public class Main {
         int b = 25;
         String s = "Площадь";
         System.out.println(s + " = " + (a * b));
-
     }
 }
