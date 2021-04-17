@@ -5,13 +5,13 @@
 
 public class Main {
     public static void main(String[] args) {
-        int[] massiv = new int[10];
+        int[] mass = new int[10];
 
-        for (int i = 0; i < massiv.length; i++) {
-            massiv[i] = (int) (Math.random() * 10);
-            System.out.println("Массив: " + massiv[i]);
+        for (int i = 0; i < mass.length; i++) {
+            mass[i] = (int) (Math.random() * 10);
+            System.out.println("Массив: " + mass[i]);
 
-            if (massiv[i] == 5) 
+            if (mass[i] == 5) 
                 System.out.println("Да!");
             else 
                 System.out.println("Нет");
