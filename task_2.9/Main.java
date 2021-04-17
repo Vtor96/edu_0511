@@ -11,8 +11,10 @@ public class Main {
             array[i] = (int) (Math.random() * 10);
             System.out.println("Массив: " + array[i]);
 
-            if (array[i] == 5) System.out.println("Да!");
-            else System.out.println("Нет");
+            if (array[i] == 5) 
+                System.out.println("Да!");
+            else 
+                System.out.println("Нет");
         }
     }
 }
