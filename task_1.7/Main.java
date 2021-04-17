@@ -9,16 +9,22 @@
 
 
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         System.out.print("Введите значение a: ");
         int a = scan.nextInt();
+        
         System.out.print("Введите значение b: ");
         int b = scan.nextInt();
+        
         System.out.print("Введите значение c: ");
         int c = scan.nextInt();
+        
         int V = a * b * c * 1000;
+        
         System.out.println(V + " литров необходимо для наполнения бассейна");
     }
 }
