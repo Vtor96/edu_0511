@@ -9,6 +9,7 @@ public class Main {
         for(int i = 0; i < elem.length; i++){
             sum = sum * elem[i];
         }
+        
         System.out.println("Произведение элементов в массиве = " + sum);
     }
 }
