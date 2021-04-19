@@ -10,15 +10,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         
         System.out.print("Введите сумму вклада: ");
-        long vklad = scanner.nextLong();
+        double vklad = scanner.nextLong();
         
         System.out.print("Введите процент: ");
-        long procent = scanner.nextLong();
+        double procent = scanner.nextLong();
 
-        for (int year = 1; year <= 5; year++){
+        for (int i = 1; i <= 5; i++){
             vklad += ((vklad * procent)/100);
             
-            System.out.println("За " + year + " год на Вашем счету " + Math.round(vklad) + " рублей");
+            System.out.println("За " + i + " год на Вашем счету " + Math.round(vklad) + " рублей");
         }
     }
 }
