@@ -3,25 +3,20 @@
 Если это так - выведите 'Делится' и результат деления, иначе выведите 'Делится с остатком' и остаток от деления.
 */
 
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
         System.out.print("Введите первое число: ");
         double a = scanner.nextDouble();
         
         System.out.print("Введите второе число: ");
-        double b = scanner.nextDouble();*/
-
-        double a = 30;
-        double b = 7;
+        double b = scanner.nextDouble();
         
-        //double a = 25;
-        //double b = 5;
+        double i = a % b;
         
-        double i = a%b;
         if (i == 0){
             System.out.println("Делится без остатка! " + i);
         }else {
