@@ -17,10 +17,12 @@ public class Main {
 
             System.out.print(mass[i] + " ");
 
-            System.out.println("\nСумма = " + sum);
+            //System.out.println("\nСумма = " + sum);
 
-            if (sum > 10)
-                System.out.println("Элементов необходимо: " + cout);
+            if (sum > 10){
+                System.out.println("\nЭлементов необходимо: " + cout);
+                break;
+            }
         }
     }
 }
