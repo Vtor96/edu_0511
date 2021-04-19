@@ -9,7 +9,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         
         System.out.print("Введите число = ");
-        float a = scan.nextFloat();
+        double a = scan.nextFloat();
         
         double proc = a + ((15.0 * a) / 100);
         
