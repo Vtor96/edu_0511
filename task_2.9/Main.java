@@ -4,16 +4,17 @@
 */
 
 public class Main {
-    public static void main(String[] args) {
-        int[] mass = new int[10];
+    public static void main(String[] args){
+        int[] array = new int[10];
 
-        for (int i = 0; i < mass.length; i++) {
-            mass[i] = (int) (Math.random() * 10);
-            System.out.println("Массив: " + mass[i]);
+        for (int i = 0; i < array.length; i++){
+            array[i] = (int) (Math.random() * 10);
+            System.out.println("Массив: " + array[i]);
 
-            if (mass[i] == 5) 
+            if (array[i] == 5){
                 System.out.println("Да!");
-            else 
+                break;
+            }else
                 System.out.println("Нет");
         }
     }
