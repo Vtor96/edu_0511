@@ -13,8 +13,10 @@ public class Main {
 
             System.out.println("Массив: " + mass[i]);
 
-            if (mass[i] == mass[i-1])
+            if (mass[i] == mass[i-1]) {
                 System.out.println("Да!");
+                break;
+            }
             else
                 System.out.println("Нет");
         }
