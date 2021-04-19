@@ -13,11 +13,13 @@
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("РамуМылаМама");
-        System.out.println("РамуМамаМыла");
-        System.out.println("МылаМамаРаму");
-        System.out.println("МылаРамуМама");
-        System.out.println("МамаМылаРаму");
-        System.out.println("МамаРамуМыла");
+        String s [] = {"Мама", "Мыла", "Раму"};
+
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+                if (i != j)
+                    System.out.println(s[i] + s[j] + s[3 - i - j]);
+            }
+        }
     }
 }
