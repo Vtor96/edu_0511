@@ -4,12 +4,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        int sum = 1;
+        int comp = 1;
         int[] elem= {2, 3, 4, 5};
         for(int i = 0; i < elem.length; i++){
-            sum = sum * elem[i];
+            comp *= elem[i];
         }
         
-        System.out.println("Произведение элементов в массиве = " + sum);
+        System.out.println("Произведение элементов в массиве = " + comp);
     }
 }
