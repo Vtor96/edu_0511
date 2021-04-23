@@ -14,7 +14,9 @@ public class Main {
 
         cat.setName("Жужик");
 
-        System.out.println(cat.getName());
+        String name = cat.getName();
+
+        System.out.println(name);
     }
 }
 
