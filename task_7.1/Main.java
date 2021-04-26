@@ -21,26 +21,27 @@ public class Main {
             String proxy = "";
 
             while ((i = fin.read()) != -1){
-                if(i == 13)
-                    continue;
+                if(i == 13)  continue;
                 else if(i == 10){
                     String ip = proxy.split(":")[0];
                     String port = proxy.split(":")[1];
 
-                    /*MyThread myThread1 = new MyThread(checkProxy(ip, Integer.parseInt(port)));
-                    myThread1.start();*/
+                    // 1 способ
+                    MyThread myThread1 = new MyThread(checkProxy(ip, Integer.parseInt(port)));
+                    myThread1.start();
 
+                    // 2 способ
                     Thread myRunnableThread1 = new Thread(new MyRunnableThread(checkProxy(ip, Integer.parseInt(port))));
                     myRunnableThread1.start();
 
-                    /* 3 способ
-                    Thread thread = new Thread(new Runnable() {
+                    // 3 способ
+                    Thread thread = new Thread(new Runnable(){
                         @Override
                         public void run() {
-                            System.out.println(checkProxy(ip,Integer.parseInt(port)));
+                            System.out.println(checkProxy(ip, Integer.parseInt(port)));
                         }
                     });
-                    thread.start();*/
+                    thread.start();
 
                     proxy = "";
                 }else if(i != 9){
@@ -57,11 +58,15 @@ public class Main {
     public static String checkProxy(String ip, int port){
         try{
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip, port));
+
             URLConnection urlConnection = new URL("https://vozhzhaev.ru/test.php").openConnection(proxy);
+
             InputStream is = urlConnection.getInputStream();
             InputStreamReader reader = new InputStreamReader(is);
+
             int rc;
             StringBuilder sb = new StringBuilder();
+
             while ((rc = reader.read()) != -1){
                 sb.append((char)rc);
             }
@@ -72,7 +77,7 @@ public class Main {
     }
 }
 
-/* 1 способ
+//1 способ
 class MyThread extends Thread{
     private String task;
 
@@ -85,7 +90,7 @@ class MyThread extends Thread{
     public void run(){
             System.out.println(task);
     }
-}*/
+}
 
 //2 способ
 class MyRunnableThread implements Runnable{
